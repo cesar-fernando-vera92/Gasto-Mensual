@@ -1,1 +1,3 @@
-# Proyecto-Final-JavaScript
+# Proyecto Final JavaScript
+
+Ingrese su monto disponible y registre sus consumos diarios 
