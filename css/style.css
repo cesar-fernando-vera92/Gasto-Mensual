@@ -1,51 +1,96 @@
+:root {
+  --primary-bg: DarkSlateGray;
+  --secondary-bg: #ffffff;
+  --border-color: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #004e92;
+  --spacing-base: 30px;
+  --border-radius: 10px;
+}
+
+/* Reset y estilos base */
 body {
-    background-color: darksalmon;
+  background-color: var(--primary-bg);
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  line-height: 1.6;
 }
+
+/* Tipografía */
+h1 {
+  font-weight: 300;
+  font-size: 3.75rem; /* 60px */
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-base);
+}
+
+h2 {
+  font-weight: 100;
+  color: var(--text-secondary);
+  font-size: 1.375rem; /* 22px */
+  margin-bottom: var(--spacing-base);
+}
+
+.text-center {
+  font-weight: 200;
+  text-align: center;
+}
+
+/* Layout */
 header {
-    margin: 30px 0;
+  margin: var(--spacing-base) 0;
 }
+
 .contenido {
-    border-color: 3px black solid;
-    padding:20px;
+  border: 3px solid var(--border-color);
+  padding: 1.25rem; /* 20px */
 }
 
 .contenido-principal {
-    background-color: rgb(255, 255, 255);
-    padding: 30px;
-    border-radius: 10px;
-    border: 3px black solid;
+  background-color: var(--secondary-bg);
+  padding: var(--spacing-base);
+  border-radius: var(--border-radius);
+  border: 3px solid var(--border-color);
 }
-.container-sueldo{
-    display: flex;
-    max-width: 600px;
-    padding: 30px;
+
+/* Componentes específicos */
+.container-sueldo {
+  display: flex;
+  max-width: 600px;
+  padding: var(--spacing-base);
+  gap: 0.625rem; /* 10px */
 }
-.container-sueldo .btn{
-    margin-right: 10px
+
+.container-sueldo .btn {
+  margin-right: 0.625rem; /* 10px */
 }
-.presupuesto p{
-    margin-bottom: 0;
-    font-weight: bold;
+
+.presupuesto p {
+  margin-bottom: 0;
+  font-weight: bold;
 }
+
 .presupuesto p span {
-    font-weight: normal;
+  font-weight: normal;
 }
+
 #gastos {
-    margin-bottom: 30px;
+  margin-bottom: var(--spacing-base);
 }
-.text-center{
-    font-weight: 200; 
-}
-h1{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 60px;
-    color: white;
-}
-h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    color:#004e92;
-    font-size: 22px;
-    margin-bottom:30px;
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+  
+  .container-sueldo {
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+  
+  .container-sueldo .btn {
+    margin-right: 0;
+    margin-bottom: 0.625rem;
+  }
 }
