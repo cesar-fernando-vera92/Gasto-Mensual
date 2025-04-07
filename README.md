@@ -8,15 +8,14 @@
 
 ## 🚀 **Características**  
 ✔️ Registra ingresos y gastos  
-✔️ Visualiza tus finanzas en gráficos interactivos  
-✔️ Filtra por categorías y fechas  
+✔️ Visualiza tus finanzas   
 ✔️ Almacenamiento local (no se pierden los datos al recargar)  
 
 ---
 
 ## 🛠️ **Tecnologías**  
-- HTML5, CSS3, JavaScript  
-- Chart.js (gráficos)  
+- HTML5, CSS3, JavaScript
+- Boostrap 
 - LocalStorage (persistencia de datos)  
 ---
 
