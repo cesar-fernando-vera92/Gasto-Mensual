@@ -49,7 +49,9 @@ body {
   .card-body {
       padding: 1rem;
   }
-  
+  .card-body button{
+      margin: 5px;
+  }  
   .contenido-principal .row > div {
       margin-bottom: 20px;
   }
