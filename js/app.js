@@ -272,21 +272,30 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('exportar-datos').addEventListener('click', exportarDatos);
 });
 
+
 function establecerPresupuesto(e) {
     e.preventDefault();
     const inputPresupuesto = document.getElementById('input-presupuesto');
-    const presupuesto = Number(inputPresupuesto.value);
+    let valor = inputPresupuesto.value.trim();
+    
+    // Limpiar y convertir el valor
+    valor = valor.replace(/\./g, '').replace(',', '.');
+    const presupuesto = Number(valor);
 
     if (presupuesto <= 0 || isNaN(presupuesto)) {
         ui.mostrarMensaje('El presupuesto debe ser un número mayor a cero', 'danger');
         return;
     }
 
+    // Formatear bonito para mostrar
+    inputPresupuesto.value = presupuesto.toLocaleString('es-AR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+
     presupuestoApp = new Presupuesto(presupuesto);
     ui.mostrarPresupuesto(presupuestoApp);
     guardarDatos();
-
-    // Ocultar sección de presupuesto y mostrar el resto
     document.getElementById('seccion-presupuesto').classList.add('d-none');
     ui.mostrarMensaje('Presupuesto establecido correctamente', 'success');
 }
