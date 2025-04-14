@@ -9,7 +9,9 @@
 ## 🚀 **Características**  
 ✔️ Registra ingresos y gastos  
 ✔️ Visualiza tus finanzas   
-✔️ Almacenamiento local (no se pierden los datos al recargar)  
+✔️ Almacenamiento local (no se pierden los datos al recargar) 
+✔️ Graficos con los gastos detallados
+✔️ Permite exportar en csv 
 
 ---
 
